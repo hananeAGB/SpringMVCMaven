@@ -16,5 +16,7 @@
                 welcome page and also update the welcome-file setting in</i>
             <tt>web.xml</tt>.</p>
         <a href="/PosUserProject/hello">click here to say hello</a>
+       
+
     </body>
 </html>

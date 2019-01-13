@@ -5,7 +5,12 @@
  */
 package com.ensat.Controller;
 
+
+import com.ensat.DAO.PostDAO;
+import com.ensat.services.PostServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.portlet.ModelAndView;
 
@@ -15,10 +20,12 @@ import org.springframework.web.portlet.ModelAndView;
  */
 @Controller
 public class HomeController {
+    // @Autowired
+    // public PostServices ps;
     @RequestMapping(value="/hello")
-    public String showIndex(){
-        //ModelAndView model=new ModelAndView("hello");
-        //model.addObject(model);
-        return "hello";
+    public ModelAndView showIndex(){
+        ModelAndView model=new ModelAndView("post");
+       model.addObject("listPost","lkm");
+        return model;
     }
 }
